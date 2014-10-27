@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Excelsoft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="All Rights Reserved ExcelSoft Global - Marked by Marlin Jayakody">
+
+    <!-- The Styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="col-md-5">
+    <input type="text" class="form-control dropdown-table-input" />
+
+</div>
+
+<div class="col-md-5 table-container">
+    <input id="search" type="text" class="form-control table-search" />
+
+</div>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+<script src="js/jquery.searchable.js"></script>
+
+
+<script src="table-drop-plugin.js"></script>
+
+
+
+
+
+<script>
+
+    $( document ).ready(function() {
+
+        var table_html = '<table id="table" style="background-color: #fff; margin-top: 20px;" class="table table-bordered dropdown-table table-hover" >';
+        table_html += '<thead style="color: #000;">';
+        table_html += '<th>#</th>';
+        table_html += '<th>First Name</th>';
+        table_html += '<th>Last Name</th>';
+        table_html += '<th>Username</th>';
+        table_html += '</thead>';
+        table_html += '<tbody>';
+        table_html += '<tr class="odd">';
+        table_html += '<td>1</td>';
+        table_html += '<td>Mark</td>';
+        table_html += '<td>Otto</td>';
+        table_html += '<td>@mdo</td>';
+        table_html += '</tr>';
+        table_html += '<tr class="even">';
+        table_html += '<td>2</td>';
+        table_html += '<td>Jacob</td>';
+        table_html += '<td>Thornton</td>';
+        table_html += '<td>@fat</td>';
+        table_html += '</tr>';
+        table_html += '<tr class="odd">';
+        table_html += '<td>3</td>';
+        table_html += '<td>Larry the Bird</td>';
+        table_html += '<td>@fat</td>';
+        table_html += '<td>@twitter</td>';
+        table_html += '</tr>';
+        table_html += '</tbody>';
+        table_html += '</table>';
+
+        $('.table-container').dropDownTable({
+
+            elementHtml: table_html,
+            appendClassName: '.table-container',
+            tableClassName : '.dropdown-table',
+            dropdownTableInputClassName : '.dropdown-table-input',
+            tableSearchInputClassName : '.table-search',
+            searchableTableID : '#table',
+            trIndexAsText : 1
+        });
+
+    });
+</script>
+
+</body>
+</html>
